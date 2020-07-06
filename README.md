@@ -10,7 +10,7 @@ A quick web app prototype sample using the following technologies:
     - spring-webmvc (MVC pattern).
     - spring-jdbc.
     - spring-data-jpa (JPA Repositories).
-    - spring-orm (Hibernate integration).
+    - spring-orm (Hibernate Integration).
 
 - ## Hibernate Core Version 5.
 
