@@ -7,6 +7,7 @@ A quick web app prototype sample using the following technologies:
 
     - spring-core (main library and IoC).
     - spring-webmvc (MVC pattern).
+    - spring-web (endpoint controllers).
     - spring-jdbc.
     - spring-data-jpa (JPA Repositories).
     - spring-orm (Hibernate Integration).
