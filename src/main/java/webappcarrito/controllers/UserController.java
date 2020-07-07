@@ -1,5 +1,7 @@
 package webappcarrito.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -43,6 +45,28 @@ public class UserController {
 		
 		return response;
 		
+	}
+	
+	@RequestMapping(value = "/findAll", method = RequestMethod.GET)
+	public List<User> findAll(){
+		
+		List<User> response = userService.findAll();
+		
+		return response;
+	}
+	
+	@RequestMapping(value = "/update", method = RequestMethod.PUT)
+	public User update(@RequestParam(value = "id") Integer id, @RequestBody UserDTO updatedUser) {
+		
+		try {
+			UserValidator.userDTOValidator(updatedUser);
+		} catch (Exception e) {
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage(), e);
+		}
+		
+		User response = userService.update(id, updatedUser);
+		
+		return response;
 	}
 
 }

@@ -1,5 +1,6 @@
 package webappcarrito.services;
 
+import static org.junit.Assert.assertEquals;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.when;
 
@@ -10,10 +11,8 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.internal.matchers.Any;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import junit.framework.Assert;
 import webappcarrito.dtos.UserDTO;
 import webappcarrito.entities.Role;
 import webappcarrito.entities.User;
@@ -45,7 +44,7 @@ public class UserServiceTest {
 		when(userRepository.findById(anyInt())).thenReturn(optionalUser);
 		
 		User responseUser = userService.findByID(5);
-		Assert.assertEquals("Fulano", responseUser.getName());
+		assertEquals("Fulano", responseUser.getName());
 		
 	}
 	
@@ -68,7 +67,7 @@ public class UserServiceTest {
 		userDTO.setRoleCode("ADM");
 
 		User responseUser = userService.create(userDTO);
-		Assert.assertEquals("Fulano", responseUser.getName());
+		assertEquals("Fulano", responseUser.getName());
 		
 	}
 
