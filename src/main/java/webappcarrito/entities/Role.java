@@ -14,9 +14,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "role")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Role implements Serializable{
 
 	private static final long serialVersionUID = -1828772690395055496L;
@@ -71,7 +73,7 @@ public class Role implements Serializable{
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
+
 	@JsonBackReference
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "role")
 	public Set<User> getUsers() {

@@ -49,6 +49,7 @@ public class PersistanceContext {
 		jpaProperties.put("hibernate.show_sql", env.getProperty("hibernate.show_sql"));
 		jpaProperties.put("hibernate.connection.pool_size", env.getProperty("hibernate.connection.pool_size"));
 		jpaProperties.put("hibernate.current_session_context_class", env.getProperty("hibernate.current_session_context_class"));		
+		jpaProperties.put("hibernate.enable_lazy_load_no_trans", env.getProperty("hibernate.enable_lazy_load_no_trans"));		
 		
 		lceManagerFactoryBean.setJpaProperties(jpaProperties);
 		
