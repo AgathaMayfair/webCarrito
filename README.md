@@ -1,4 +1,4 @@
-# webCarrito (E - commer application)
+# webCarrito (E - commers application)
 ### The initial infrastructure for an e-commer web-app
 
 A quick web app prototype sample using the following technologies: 
