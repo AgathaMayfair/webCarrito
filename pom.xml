@@ -12,7 +12,7 @@
 		<mysqlconnectorjava.version>8.0.19</mysqlconnectorjava.version>
 		<springframework.version>5.2.4.RELEASE</springframework.version>
 		<hibernate.version>5.4.12.Final</hibernate.version>
-		<jackson.library>2.10.3</jackson.library>
+		<jackson.library>2.10.5.1</jackson.library>
 		<springframework.data>2.2.6.RELEASE</springframework.data>
 	</properties>
 	<dependencies>
