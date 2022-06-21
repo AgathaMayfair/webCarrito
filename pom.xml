@@ -9,7 +9,7 @@
 	<name>webappcarrito Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-		<mysqlconnectorjava.version>8.0.19</mysqlconnectorjava.version>
+		<mysqlconnectorjava.version>8.0.28</mysqlconnectorjava.version>
 		<springframework.version>5.2.4.RELEASE</springframework.version>
 		<hibernate.version>5.4.12.Final</hibernate.version>
 		<jackson.library>2.10.3</jackson.library>
